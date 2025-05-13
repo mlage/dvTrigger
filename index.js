@@ -46,5 +46,5 @@ document.getElementById('trigger').addEventListener('click', function () {
 
     selectedParams.fileid = result;
 
-    document.getElementById('content').innerHTML = `${selectedParams}`;
+    document.getElementById('content').innerHTML = `${JSON.stringify(selectedParams)}`;
 });
