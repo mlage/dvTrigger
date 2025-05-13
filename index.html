@@ -3,13 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Dataverse Data Trigger</title>
+    <title>Data Trigger</title>
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <h1>Dataverse Data Trigger</h1>
-    <button id="trigger">Trigger Dataverse Data</button>
+    <h1>Data Trigger</h1>
+
+    <label for="start-date">Start Date</label>
+    <input type="date" id="start-date" name="start-date">
+
+    <label for="end-date">End Date</label>
+    <input type="date" id="end-date" name="end-date">
+
+    <label for="country">Country</label>
+    <input type="text" id="country" name="country" placeholder="Enter country">
+
+    <label for="dataverse-key">Dataverse Key</label>
+    <input type="text" id="dataverse-key" name="dataverse-key" placeholder="Enter Dataverse key">
+
+    <button id="trigger">Generate Data</button>
 
     <div id="content"></div>
 </body>
