@@ -1,14 +1,3 @@
-document.getElementById('trigger').addEventListener('click', function () {
-    const result = new URL(window.location.href).searchParams.get("fileid");
-
-    if (result === null) {
-        document.getElementById('content').innerHTML = 'No fileid found in the URL.';
-        return;
-    }
-
-    document.getElementById('content').innerHTML = `${result}`;
-});
-
 // Object to store selected parameters
 const selectedParams = {
     startDate: '',
@@ -36,15 +25,8 @@ document.getElementById('dataverse-key').addEventListener('input', function (e) 
 
 // Example: Use selectedParams when the trigger button is clicked
 document.getElementById('trigger').addEventListener('click', function () {
-    console.log('Selected Parameters:', selectedParams);
     const result = new URL(window.location.href).searchParams.get("fileid");
-
-    if (result === null) {
-        document.getElementById('content').innerHTML = 'No fileid found in the URL.';
-        return;
-    }
-
-    selectedParams.fileid = result;
+    selectedParams.fileid = result ? result : "";
 
     document.getElementById('content').innerHTML = `${JSON.stringify(selectedParams)}`;
 });
